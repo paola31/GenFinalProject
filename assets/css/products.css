@@ -1,0 +1,94 @@
+.add-to-cart-button
+{
+    color: var(--au-white) !important;
+    border-color: var(--purple-color);
+    background-color: var(--purple-color);
+}
+
+.add-to-cart-button:hover
+{
+    background-color: var(--au-purple-opacity);
+}
+
+.img-container {
+    height: 60% !important;
+}
+
+.card-fixer {
+    max-height: 500px;
+}
+
+.card-description {
+    min-height: 54px;
+}
+
+.card {
+    /* Esto es necesario para que el botón se posicione relativo a la tarjeta */
+    position: relative;
+    width: 100%;
+    max-width: 300px;/* ajusta el tamaño de las tarjetas */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mantiene la sombra */
+    border: 0px ;
+}
+
+.card-body {
+    padding: 20px;
+    /* Espacio adicional para que el botón no se solape con el contenido */
+    padding-bottom: 60px;
+}
+
+.add-to-cart-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    /* Centra el botón horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta el tamaño del botón */
+    width: 75%;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    /* Ajusta el espacio entre renglones con la variable definas en aura */
+    line-height: var( --space-4-x);
+}
+
+.minicart__noproducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-weight: bold;
+}
+
+.offCanvas__minicart_active {
+    overflow: hidden;
+    position: fixed;
+}
+
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+    border-color: var(--au-purple);
+    background-color: var(--au-purple);
+}
+
+.last-units__label {
+    position: absolute;
+    top: 30px;
+    right: -60px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    transform: rotate(45deg);
+    background-color: var(--au-wine);
+    color: var(--au-white);
+    font-size: small;
+}
+
+.products-title {
+    color: var(--foreground-color) !important;
+}

@@ -76,8 +76,8 @@ function updateProductsCounter (productsInCart) {
     return acc
   }, 0)
 
-  const counterElement = document.querySelector('#cart-count')
-  counterElement.innerHTML = counter
+/*  const counterElement = document.querySelector('#cart-count')
+  counterElement.innerHTML = counter*/
 }
 
 /**

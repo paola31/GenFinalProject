@@ -1,7 +1,9 @@
-fetch('assets/js/data/categories.json')
-    .then(response => response.text())
-    .then(text => renderCategories(JSON.parse(text)))
-    .catch(error => console.error('Error cargando el archivo JSON:', error));
+document.addEventListener('componentsLoaded', function(){
+    fetch('assets/js/data/categories.json')
+        .then(response => response.text())
+        .then(text => renderCategories(JSON.parse(text)))
+        .catch(error => console.error('Error cargando el archivo JSON:', error));
+})
 
 function renderCategories(data)
 {

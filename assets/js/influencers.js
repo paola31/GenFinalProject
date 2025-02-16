@@ -1,25 +1,28 @@
-fetch('/assets/js/data/products.json')
-  .then(response => response.text())
-  .then(text => renderInfluencer(JSON.parse(text).filter(product => product.influencer)))
-  .catch(error => console.error('Error cargando el archivo JSON:', error))
+document.addEventListener('componentsLoaded', function (e) {
+    fetch('/assets/js/data/products.json')
+        .then(response => response.text())
+        .then(text => renderInfluencer(JSON.parse(text).filter(product => product.influencer)))
+        .catch(error => console.error('Error cargando el archivo JSON:', error))
+})
+
 
 /**
  * It renders all the products in the page as a grid/list
- * 
+ *
  * @param {Product} data Products list
-*/
-function renderInfluencer (data) {
-  let productsRow = document.getElementById('banner-influencers')
-  let productsHtml = ''
+ */
+function renderInfluencer(data) {
+    let productsRow = document.getElementById('banner-influencers')
+    let productsHtml = ''
 
-  const productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || []
+    const productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || []
 
-  for (var i = 0; i < data.length; i++) {
-    const product = data[i]
-    const qtyInCart = productsInCart.find(item => item?.id === product.id)?.qty || 0
-    const actualStock = product.stock-qtyInCart
-    const lastUnits = actualStock > 0 && actualStock <= 10
-    productsHtml += `
+    for (var i = 0; i < data.length; i++) {
+        const product = data[i]
+        const qtyInCart = productsInCart.find(item => item?.id === product.id)?.qty || 0
+        const actualStock = product.stock - qtyInCart
+        const lastUnits = actualStock > 0 && actualStock <= 10
+        productsHtml += `
       <div class="banner-box">
         <img class="img-card main" src="${product.influencer.images[0]}" alt="${product.name} Influencer Image" />
         <img class="img-card hover" src="${product.influencer.images[1]}" alt="${product.name} Influencer Image" />
@@ -49,7 +52,10 @@ function renderInfluencer (data) {
                       <p class="card-text">${product.description}</p>
                       <p class="card-text">
                         <small class="text-muted">
-                          Price: $${product.price.toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}
+                          Price: $${product.price.toLocaleString(undefined, {
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+        })}
                         </small>
                       </p>
                       <button class="add-to-cart-button btn btn-primary" id="product-${product.id}__btn"
@@ -70,22 +76,22 @@ function renderInfluencer (data) {
         </div>
       </div>
     `
-  }
-  
+    }
 
-  // esta linea indica que ya los productos estan renderizados
-  productsRow.innerHTML = productsHtml
 
-  setInfluencersModalsBehavior()
+    // esta linea indica que ya los productos estan renderizados
+    productsRow.innerHTML = productsHtml
 
-  // empezamos agregar eventos a los botones de los productos
-  const addToCartButtons = document.querySelectorAll('.add-to-cart-button')
-  addToCartButtons.forEach(button => {
-    button.addEventListener('click', handleAddToCart)
-  })
+    setInfluencersModalsBehavior()
 
-  // Setear los valores iniciales cuando hay productos ya agregados al carrito (localstorage)
-  updateProductsCounter(productsInCart)
-  renderShoppingCart(productsInCart)
+    // empezamos agregar eventos a los botones de los productos
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-button')
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', handleAddToCart)
+    })
+
+    // Setear los valores iniciales cuando hay productos ya agregados al carrito (localstorage)
+    updateProductsCounter(productsInCart)
+    renderShoppingCart(productsInCart)
 }
 

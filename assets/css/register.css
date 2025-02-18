@@ -111,11 +111,13 @@ footer {
 }
 
 .btn-primary {
-    background-color: rgba(94, 110, 96, 0.8);
+    /*background-color: rgba(94, 110, 96, 0.8);*/
+    background-color: var(--inti-deep-green);
+    opacity: 0.75;
     padding: 12px 24px;
     font-size: 16px;
     border-radius: 5px;
-    width: 50%;
+    width: 20%;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease, transform 0.2s ease;

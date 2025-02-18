@@ -24,6 +24,25 @@
     border-radius: 10px;
 }
 
+.help-button {
+    /*background-color: rgba(94, 110, 96, 0.8);*/
+    background-color: var(--inti-deep-green);
+    opacity: 0.75;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 20%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--inti-light-green);
+}
+
+.help-button:hover {
+    background-color: rgba(94, 110, 96, 1);
+    transform: scale(1.05);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .carousel-caption {

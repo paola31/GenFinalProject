@@ -193,7 +193,27 @@
 }
 
 .category-title {
-    color: var(--foreground-color) !important
-;
+    color: var(--foreground-color) !important;
+}
 
+/*.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}*/
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
 }

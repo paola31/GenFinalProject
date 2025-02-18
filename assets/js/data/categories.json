@@ -54,5 +54,19 @@
     "description": "Experience the magic of our top-seller",
     "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
     "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
+  },
+  {
+    "id": 9,
+    "name": "DUMMY",
+    "description": "Experience the magic of our top-seller",
+    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
+    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
+  },
+  {
+    "id": 10,
+    "name": "DUMB",
+    "description": "Experience the magic of our top-seller",
+    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
+    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
   }
 ]

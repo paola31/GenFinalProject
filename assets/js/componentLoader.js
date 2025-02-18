@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         loadComponent("#banner", "components/banner.html"),
         loadComponent("#engagement", "components/engagement.html"),
         loadComponent("#categoriesContainer", "components/categories.html"),
-        loadComponent("#sustainable", "components/sustainable.html"),
         loadComponent("#footer", "components/footer.html"),
         loadComponent("#notifier", "components/notifier.html"),
     ]).then(() => {
@@ -61,11 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return Promise.all([
             loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"),
             loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"),
-            loadScript("assets/js/plugins/glightbox.min.js"),
             loadScript("/assets/js/script.js"),
             loadScript("/assets/js/cart.js"),
-            loadScript("/assets/js/modal-influencers.js"),
             loadScript("/assets/js/offerBar.js"),
+            loadScript("/assets/js/navbar.js")
         ]);
     }).then(() => {
         console.log("Todos los scripts han sido cargados.");

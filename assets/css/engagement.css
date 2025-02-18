@@ -1,0 +1,11 @@
+.engagement-title
+{
+    font-family: var(--offer-text);
+}
+
+.engagement-img {
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho de su contenedor */
+    height: 100%; /* Todas tendrán el mismo alto */
+    object-fit: cover; /* Asegura que la imagen se recorte sin deformarse */
+    border-radius: 10px; /* Opcional: Bordes redondeados para mejor apariencia */
+}

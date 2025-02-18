@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-:root {
+
+:root
+{
+  --inti-gray:#2D2D29;
+  --inti-deep-green:#215D6D;
+  --inti-medium-green:#3CA2A2;
+  --inti-green:#92C7A3;
+  --inti-light-green:#DFECE6;
+  --init-alternative-green:#92B395;
+  --inti-light-purple:#726681;
+  --inti-purple:#565164;
+  --offer-text: 'DotGothic16', sans-serif;
+
+
+
   --au-black:#000000;
   --au-white:#fff;
   --primary-color:#000000;
@@ -34,7 +50,7 @@
   --bg-light-dark-color: #1a1818;
   --border-color: #EDEDED;
   --au-purple-80: #925F8F;
-  --primary-font: 'Roboto', sans;
+  --primary-font: "Atkinson Hyperlegible Next", serif;
   --secondary-font: 'Be Vietnam Pro', sans;
   --small-font-size: 0.75rem;
   --title-font-size: 2rem;

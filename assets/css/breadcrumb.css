@@ -1,8 +1,8 @@
 /* 
     31. Breadcrumb css 
 */
-.breadcrumb__bg {
-  background: var(--au-brown-20);
+.breadcrumb_bg {
+  background: var(--inti-light-green);
   padding: 0.45rem 0;
 }
 

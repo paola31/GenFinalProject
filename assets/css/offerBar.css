@@ -1,0 +1,31 @@
+#offer-marquee {
+    font-family: var(--offer-text);
+    font-size: 1.2rem;
+    white-space: nowrap;
+    position: relative;
+    animation: scrollText 10s linear infinite;
+}
+
+/* 🔥 SOLO el texto tiene efecto LED */
+#offer-text {
+    color: var(--init-alternative-green);
+    text-shadow: 0 0 5px var(--init-alternative-green), 0 0 10px var(--init-alternative-green), 0 0 15px var(--init-alternative-green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

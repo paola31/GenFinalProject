@@ -1,9 +1,12 @@
 let json
 
-fetch('assets/js/data/products.json')
-    .then(response => response.text())
-    .then(text => renderProducts(JSON.parse(text)))
-    .catch(error => console.error('Error cargando el archivo JSON:', error))
+document.addEventListener('componentsLoaded', () => {
+    fetch('assets/js/data/products.json')
+        .then(response => response.text())
+        .then(text => renderProducts(JSON.parse(text)))
+        .catch(error => console.error('Error cargando el archivo JSON:', error))
+})
+
 
 function getCategoryFromURL() {
     const params = new URLSearchParams(window.location.search);

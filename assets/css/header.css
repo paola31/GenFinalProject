@@ -1072,7 +1072,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .menu__color--white .header__menu--items:hover .header__menu--link {
-  color: var(--foreground-color) !important;
+  color: var(--inti-green) !important;
 }
 
 .header__topbar--info {

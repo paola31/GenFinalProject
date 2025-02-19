@@ -2,10 +2,14 @@ function updateOffer(data, index)
 {
     const iconElement = document.getElementById("offer-icon");
     const textElement = document.getElementById("offer-text");
+    const icons = document.getElementsByClassName("offer-icon");
 
     if (!iconElement || !textElement || data.length === 0) return; // Verificación por seguridad
 
-    iconElement.textContent = data[index].icon;
+    for (let icon of icons)
+    {
+        icon.textContent = data[index].icon;
+    }
     textElement.textContent = data[index].text;
 }
 
@@ -24,7 +28,7 @@ document.addEventListener("componentsLoaded", function ()
             {
                 index = (index + 1) % data.length;
                 updateOffer(data, index);
-            }, 10000);
+            }, 20000);
         })
         .catch(error => console.error("Error loading offers:", error));
 });

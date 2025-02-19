@@ -2,7 +2,7 @@
     <div class="container">
         <div class="main__header--inner d-flex justify-content-between align-items-center">
             <div class="offcanvas__header--menu__open ">
-                <a class="offcanvas__header--menu__open--btn text-white" href="javascript:void(0)" data-offcanvas>
+                <a class="offcanvas__header--menu__open--btn text-white" href="javascript:void(0)" onclick="goHome()" data-offcanvas>
                     <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg"
                          viewBox="0 0 512 512">
                         <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
@@ -12,13 +12,13 @@
                 </a>
             </div>
             <div class="main__logo">
-                <h1 class="main__logo--title"><a class="main__logo--link" href="index.html">
-                    <img class="main__logo--img sticky__none"
-                         src="https://res.cloudinary.com/di1xiwdsn/image/upload/v1739757888/ztc3p29mo2fqlqsqdhmb.jpg"
-                         alt="logo-img" height="40px" width="auto">
-                    <img class="main__logo--img sticky__block"
-                         src="https://res.cloudinary.com/di1xiwdsn/image/upload/v1739757888/ztc3p29mo2fqlqsqdhmb.jpg"
-                         alt="logo-img" height="20px" width="auto">
+                <h1 class="main__logo--title"><a class="main__logo--link" href="javascript:void(0);" onclick="goHome()">
+                    <img class="main__logo--img sticky__none rounded-circle"
+                         src="https://res.cloudinary.com/di1xiwdsn/image/upload/v1739936440/WhatsApp_Image_2025-02-18_at_7.57.11_PM_nn5x1v.jpg"
+                         alt="logo-img" height="45px" width="auto">
+                    <img class="main__logo--img sticky__block rounded-circle"
+                         src="https://res.cloudinary.com/di1xiwdsn/image/upload/v1739936440/WhatsApp_Image_2025-02-18_at_7.57.11_PM_nn5x1v.jpg"
+                         alt="logo-img" height="45px" width="auto">
                 </a></h1>
             </div>
             <div class="header__menu menu__color--white d-none d-lg-block">
@@ -36,8 +36,8 @@
                                 </svg>
                             </a>
                             <ul class="header__sub--menu">
-                                <li class="header__sub--menu__items"><a href="products.html?category=FACE"
-                                                                        class="header__sub--menu__link">Face</a></li>
+                                <li class="header__sub--menu__items">
+                                    <a href="products.html?category=FACE" class="header__sub--menu__link">Face</a></li>
                                 <li class="header__sub--menu__items"><a href="products.html?category=EYES"
                                                                         class="header__sub--menu__link">Eyes</a></li>
                                 <li class="header__sub--menu__items"><a href="products.html?category=NAILS"

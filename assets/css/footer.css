@@ -8,7 +8,9 @@
 }
 
 .footer__bg {
-  background-color: var(--primary-color);
+  
+  
+  background-color: var(--inti-white);
   background-position: center center;
   background-size: cover;
 }

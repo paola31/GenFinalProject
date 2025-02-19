@@ -1,72 +1,78 @@
 [
   {
     "id": 1,
-    "name": "HAIR CARE",
-    "description": "Find the perfect touch for your face",
-    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739941739/Hair1_ba4nxb.jpg",
-    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845256/vp5_ihqtdq.jpg"
+    "name": "SUSTAINABLE FASHION",
+    "description": "Wear your values with timeless, sustainable fashion",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739998833/clothes1_wpcocu.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740000754/clothes4_kvnhoo.jpg"
   },
   {
     "id": 2,
-    "name": "MOUTH CARE",
-    "description": "Discover the ideal sparkle for your eyes",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737694307/Face-14_kwwpqt.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737695124/Eyes-8_cly0qi.png"
+    "name": "FACIAL CARE",
+    "description": "Reveal the natural glow of your skin.",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739995250/Face1_l3et94.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739996511/Face4_rsubkb.jpg"
   },
   {
     "id": 3,
-    "name": "FACIAL CARE",
-    "description": "Add the perfect polish to your nails",
-    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845256/vp7_qjhwvc.jpg",
-    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845257/vp4_xjgfkx.jpg"
+    "name": "ESSENTIAL OIL",
+    "description": "Embrace nature’s purity with the power of essential oils",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845257/vp2_hqpst0.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845256/vp7_qjhwvc.jpg"
+
   },
   {
     "id": 4,
     "name": "BODY CARE",
-    "description": "Bring out the best in your hair with our products",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737752218/Hair-6jpg_v2cj61.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737604618/oil-1_wxeys4.jpg"
+    "description": "Indulge in the natural harmony of body care essentials",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739996510/Body1_mhk5y3.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739996510/Body2_omqpgm.jpg"
   },
   {
     "id": 5,
     "name": "HOME CLEANING",
-    "description": "Bring out the ultimate shine for your lips",
-    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739939403/product-6_d8sdxf.jpg",
-    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739939404/product-5_dgspcm.jpg"
+    "description": "Refresh your space naturally with eco-friendly cleaning solutions.",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739939404/product-5_dgspcm.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739939403/product-6_d8sdxf.jpg"
+
+
   },
   {
     "id": 6,
-    "name": "SUSTAINABLE FASHION",
-    "description": "Delight in the enchanting scents of our fragrances",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737754207/Framgance-4_nmiicb.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737754152/Framgance-2_o79dfp.jpg"
+    "name": "HAIR CARE",
+    "description": "Find the perfect touch for your hair",
+    "imgCover": " https://res.cloudinary.com/di1xiwdsn/image/upload/v1739995253/Hair2_rombcs.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739941739/Hair1_ba4nxb.jpg"
+
   },
   {
     "id": 7,
     "name": "PETS",
-    "description": "Unleash the bold definition for your beard",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737695740/Face-15jpg_ufgybr.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737521290/Barb-2_k22ihd.png"
+    "description": "Pamper your pets with accessories that care for them and the planet",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740002642/pets_hkrrmd.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740003172/pets5_xjxvpj.jpg"
   },
   {
     "id": 8,
     "name": "VEGAN PROTEINS",
-    "description": "Experience the magic of our top-seller",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
+    "description": "Nourish yourself naturally with sustainable plant-based proteins",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740004599/milk_mkcwtc.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740004599/pets6_uadhjg.jpg"
   },
   {
     "id": 9,
     "name": "VEGAN CHEESE",
-    "description": "Experience the magic of our top-seller",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
+    "description": "Savor the creamy goodness of plant-based vegan cheese",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845255/vp12_lw10xk.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845256/vp10_asevuj.jpg"
   },
   {
     "id": 10,
     "name": "VEGAN BAKERY",
-    "description": "Experience the magic of our top-seller",
-    "imgCover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737409754/eyes_-_1_woiguy.jpg",
-    "imgHover": "https://res.cloudinary.com/dw57gwzru/image/upload/v1737413081/face_xoemx7.jpg"
+    "description": "Delight in the sweetness of cruelty-free vegan baking",
+    "imgCover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1740004956/cooks_e5ffqb.jpg",
+    "imgHover": "https://res.cloudinary.com/di1xiwdsn/image/upload/v1739845256/vp8_kiqxig.jpg"
+
+
   }
 ]

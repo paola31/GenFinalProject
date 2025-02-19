@@ -1634,13 +1634,19 @@ body.overlay__active::before,
 
 @media only screen and (max-width: 767px) {
   .main__logo {
-    padding-left: 4.5rem;
+    position: relative;
+    height: 60px; /* Altura fija para el navbar */
+    overflow: hidden; /* Oculta el exceso del logo */
   }
 }
 
 @media only screen and (max-width: 575px) {
   .main__logo {
-    padding-left: 12px;
+    position: relative;
+    height: 60px; /* Altura fija del navbar */
+    overflow: visible; /* Permitimos que el logo sobresalga */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
   }
 }
 
@@ -1649,8 +1655,10 @@ body.overlay__active::before,
 }
 
 .main__logo--img {
-  max-width: 145px;
+  height: 120px; /* Tamaño más grande para el logo */
+  width: auto;
 }
+
 
 @media only screen and (min-width: 480px) {
   .main__logo--img {

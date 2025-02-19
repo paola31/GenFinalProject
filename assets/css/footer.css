@@ -84,12 +84,12 @@
 }
 
 .footer__widget--title {
-  margin-bottom: 2.2rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   position: relative;
   font-size: var(--footer-font-size);
-  line-height: 2.2rem;
-  color: var(--secondary-color);
+  line-height: 1.2rem;
+  color: var(--inti-deep-green);
   text-transform: uppercase;
 }
 
@@ -156,7 +156,7 @@
 .footer__widget--menu__text {
   line-height: calc(var(--footer-font-size)+0.5rem);
   font-size: var(--footer-font-size);
-  color: var(--secondary-color);
+  color: var(--inti-deep-green);
 }
 
 .footer__widget--menu__text:focus {
@@ -175,7 +175,7 @@
 }
 
 .footer__widget--info__icon {
-  color: var(--secondary-color);
+  color: var(--inti-deep-green);
 }
 
 .footer__widget--info_list {
@@ -196,7 +196,7 @@
 .footer__widget--info__text {
   font-size: var(--footer-font-size);
   line-height: calc(var(--footer-font-size)+0.5rem);
-  color: var(--secondary-color);
+  color: var(--inti-deep-green);
 }
 
 .footer__widget--info__text:focus {
@@ -305,7 +305,7 @@
   height: 4.5rem;
   border: 1px solid transparent;
   color: var(--primary-color);
-  background: var(--body-background-color);
+  background: var(--inti-green);
   font-weight: 500;
   border-radius: 5px;
   padding: 0 105px 0 1.5rem;
@@ -481,3 +481,6 @@
 .copyright__content{
   color: var(--foreground-color);
 }
+
+
+

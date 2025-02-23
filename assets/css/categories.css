@@ -113,6 +113,15 @@
     margin: 5px;
 }
 
+
+.about__content--title--np--secundary {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 5px;
+    color: var(--bg-light-dark-color);
+
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* Ajusta el número de tarjetas por fila */
@@ -166,13 +175,6 @@
     line-height: var(--body-line-height, 26px);
 }
 
-.about__content--title--np--secundary {
-    font-size: 12px;
-    font-weight: normal;
-    margin: 5px;
-    color: var(--bg-light-dark-color);
-
-}
 
 .card {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mantiene la sombra */

@@ -333,7 +333,7 @@ p.description {
 
 .team__content--subtitle {
   font-size: var(--body-title-font-size);
-  line-height: calc(var(--body-title-font-size)+0.25rem);
+  line-height: calc(var(--body-title-font-size) + 0.25rem);
   color: var(--foreground-sub-color);
 }
 

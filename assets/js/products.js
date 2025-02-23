@@ -1,11 +1,24 @@
-let json
-
-document.addEventListener('componentsLoaded', () => {
+/*document.addEventListener('componentsLoaded', () => {
     fetch('assets/js/data/products.json')
         .then(response => response.text())
         .then(text => renderProducts(JSON.parse(text)))
         .catch(error => console.error('Error cargando el archivo JSON:', error))
-})
+})*/
+
+document.addEventListener('componentsLoaded', () => {
+    fetch('http://localhost:8080/api/v1/products')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error en la respuesta del servidor: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("✅ Productos obtenidos del backend:", data);
+            renderProducts(data);
+        })
+        .catch(error => console.error('❌ Error cargando los productos:', error));
+});
 
 
 function getCategoryFromURL() {
@@ -41,7 +54,7 @@ function renderProducts (data)
 
     const productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || [];
     const categoryParam = getCategoryFromURL();
-    const filteredProducts = categoryParam ? data.filter(product => product.category.toLowerCase() === categoryParam) : data;
+    const filteredProducts = categoryParam ? data.filter(product => product.category.name.toLowerCase() === categoryParam) : data;
 
     for (var i = 0; i < filteredProducts.length; i++)
     {
@@ -53,7 +66,7 @@ function renderProducts (data)
         <div class="card p-0 bg-light shadow me-3 mt-3 card-fixer" id="${product.id}">
             ${lastUnits ? `<div class="last-units__label">Last units</div>` : ""}
             <div class="img-container">
-                <img class="card-img-top h-100" src="${product.img}">
+                <img class="card-img-top h-100" src="${product.image}">
             </div>
             <div class="card-body">
                 <div class="row">
@@ -92,6 +105,6 @@ function renderProducts (data)
     })
 
     // Setear los valores iniciales cuando hay productos ya agregados al carrito (localstorage)
-    updateProductsCounter(productsInCart)
-    renderShoppingCart(productsInCart)
+/*    updateProductsCounter(productsInCart)
+    renderShoppingCart(productsInCart)*/
 }

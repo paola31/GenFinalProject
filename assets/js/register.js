@@ -107,13 +107,40 @@ registerForm.addEventListener('submit', (event) =>
             "password" : password
         }
 
-        const existentData = JSON.parse(localStorage.getItem("users")) || [];
-        existentData.push(jsonFormData);
-
-        window.localStorage.setItem("users", JSON.stringify(existentData));
-        window.location.href = window.location.href.replace("register.html", "login.html");
+        // Llamada a la API del backend
+        fetch('http://localhost:8080/auth/register', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(jsonFormData)
+        })
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.text();
+            })
+            .then(data => {
+                console.log("✅ Registro exitoso:", data);
+                displaySuccess("Registration successful! Redirecting to login...");
+                setTimeout(() => {
+                    window.location.href = "login.html"; // Redirige al login después del registro
+                }, 3000);
+            })
+            .catch(error => {
+                console.error("❌ Error en el registro:", error);
+                showError("errors", "An error occurred during registration. Please try again.");
+            });
     }
 });
+
+function showError(elementId, message) {
+    let errorSpan = document.getElementById(elementId);
+    if (errorSpan) {
+        errors = true;
+        errorSpan.innerText = message;
+        errorSpan.style.display = "block";
+    }
+}
 
 function displaySuccess()
 {

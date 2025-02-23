@@ -71,7 +71,7 @@
 .footer__widget--desc {
   font-size: var(--footer-font-size);
   margin-bottom: 0;
-  color: var(--secondary-color);
+  color: var(--inti-deep-green);
   margin-bottom: 0;
 }
 
@@ -152,7 +152,7 @@
 }
 
 .footer__widget--menu__text {
-  line-height: calc(var(--footer-font-size)+0.5rem);
+  line-height: calc(var(--footer-font-size) + 0.5rem);
   font-size: var(--footer-font-size);
   color: var(--inti-deep-green);
 }
@@ -167,7 +167,7 @@
 
 @media only screen and (min-width: 768px) {
   .footer__widget--menu__text {
-    line-height: calc(var(--footer-font-size)+0.5rem);
+    line-height: calc(var(--footer-font-size) + 0.5rem);
     font-size: var(--footer-font-size);
   }
 }
@@ -193,7 +193,7 @@
 
 .footer__widget--info__text {
   font-size: var(--footer-font-size);
-  line-height: calc(var(--footer-font-size)+0.5rem);
+  line-height: calc(var(--footer-font-size) + 0.5rem);
   color: var(--inti-deep-green);
 }
 
@@ -204,7 +204,7 @@
 @media only screen and (min-width: 768px) {
   .footer__widget--info__text {
     font-size: var(--footer-font-size);
-    line-height: calc(var(--footer-font-size)+0.5rem);
+    line-height: calc(var(--footer-font-size) + 0.5rem);
   }
 }
 
@@ -302,7 +302,7 @@
   width: 100%;
   height: 4.5rem;
   border: 1px solid transparent;
-  color: var(--primary-color);
+  color: var(--inti-light-green);
   background: var(--inti-green);
   font-weight: 500;
   border-radius: 5px;
@@ -310,9 +310,13 @@
   font-size: var(--footer-font-size);
 }
 
+.copyright-text {
+  color: var(--inti-deep-green);
+}
+
 .newsletter__subscribe--input:focus {
-  border-color: var(--secondary-color);
-  color: var(--primary-color);
+  border-color: var(--inti-deep-green);
+  color: var(--inti-gray);
 }
 
 @media only screen and (min-width: 480px) {
@@ -340,13 +344,13 @@
   right: 0;
   height: 100%;
   border: 0;
-  background: var(--secondary-color);
+  background: var(--inti-deep-green);
   padding: 0 1rem;
   font-size: var(--footer-font-size);
   text-transform: capitalize;
   font-weight: 400;
   border-radius: 5px;
-  color: var(--primary-color);
+  color: var(--inti-light-green);
 
 }
 
@@ -401,6 +405,11 @@
 
 .footer__logo--img {
   height: 50px;
+}
+
+.footer-logo {
+  width: 160px;
+  height: 160px;
 }
 
 @media only screen and (min-width: 992px) {

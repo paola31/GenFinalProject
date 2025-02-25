@@ -264,22 +264,29 @@ p.description {
 
 
 .team__thumb {
-  position: relative;
-  line-height: 1;
-  display: inline-block;
-  border: 2px solid var(--border-color);
-  padding: 0.3rem;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: 0;
   border-radius: 10px;
 }
 
 .team__thumb--img {
-  border-radius: 10px;
+  width: 100% !important;
+  height: 380px !important;
+  object-fit: cover !important;
+  object-position: top;
+  
+  
 }
 
 .team__social {
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
   margin-top: var(--space-2-x);
 }
 
@@ -290,26 +297,24 @@ p.description {
 }
 
 .team__social--icon {
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 4rem;
+  height: 4rem;
   text-align: center;
   background: var(--bg-offwhite-color);
   color: var(--body-text-color);
-  line-height: 3rem;
+  font-size: 1.5rem;
+  line-height: 4rem;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background 0.3s, color 0.3s;
+ 
 }
 
 .team__social--icon:hover {
-  background: var(--secondary-color);
+  transform: scale(1.2);
+  background: var(--au-black);
   color: var(--text-white-color);
 }
 
@@ -333,7 +338,7 @@ p.description {
 
 .team__content--subtitle {
   font-size: var(--body-title-font-size);
-  line-height: calc(var(--body-title-font-size) + 0.25rem);
+  line-height: calc(var(--body-title-font-size)+0.25rem);
   color: var(--foreground-sub-color);
 }
 

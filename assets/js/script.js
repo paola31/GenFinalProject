@@ -606,3 +606,42 @@ function hideToast(id) {
   toast.hide()
 }
 
+document.addEventListener("componentsLoaded", function () {
+  console.log("Los componentes han sido cargados, inicializando carrusel...");
+
+  let bannerElement = document.getElementById("banner");
+
+  if (bannerElement) {
+    let banner = new bootstrap.Carousel(bannerElement, {
+      interval: false, // ⚠️ Deshabilitamos el autoplay
+      wrap: true
+    });
+
+    document.querySelector(".carousel-control-prev").addEventListener("click", function () {
+      banner.prev();
+    });
+
+    document.querySelector(".carousel-control-next").addEventListener("click", function () {
+      banner.next();
+    });
+
+    console.log("Carrusel manual inicializado correctamente.");
+  } else {
+    console.error("No se encontró el carrusel después de cargar los componentes.");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.typing-animation').forEach((element) => {
+    const text = element.getAttribute('data-text');
+    let index = 0;
+    const typing = setInterval(() => {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+      } else {
+        clearInterval(typing);
+      }
+    }, 50);
+  });
+});

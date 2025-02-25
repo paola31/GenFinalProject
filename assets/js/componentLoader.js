@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             loadComponent("#categoriesContainer", "components/categories.html"),
             loadComponent("#footer", "components/footer.html"),
             loadComponent("#notifier", "components/notifier.html"),
+            loadComponent("#videos", "components/videos.html")
         ]);
     }).then(() => {
         console.log("Todos los componentes han sido cargados.");

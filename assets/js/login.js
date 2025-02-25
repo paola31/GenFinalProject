@@ -1,78 +1,66 @@
-const mockedUser = [
-  {
-    name: "Andry",
-    email: "andry@gmail.com",
-    password: "1234",
-  },
-  {
-    name: "Paola",
-    email: "paola@gmail.com",
-    password: "1234",
-  },
-  {
-    name: "Katherine",
-    email: "katherine@gmail.com",
-    password: "1234",
-  },
-  {
-    name: "Brandon",
-    email: "brandon@gmail.com",
-    password: "1234",
-  },
-]
+const formLogin = document.querySelector("#login-form");
+const resultMessageDiv = document.querySelector("#result-message");
 
-const formLogin = document.querySelector("#login-form")
+formLogin.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-const existentData = JSON.parse(localStorage.getItem("users")) || []
-mockedUser.forEach(user => existentData.push(user))
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
 
-//guardo el json en localstorage
-localStorage.setItem('users', JSON.stringify(existentData))
-
-
-formLogin.addEventListener('submit', (e)=> {
-  e.preventDefault()
-  const email = document.querySelector('#email').value.trim() 
-  const password =  document.querySelector('#password').value.trim()
-  validate(email, password)
-})
-
-const resultMessageDiv = document.querySelector('#result-message')
-
-function validate(email, password) {
-  const savedUsers = JSON.parse(localStorage.getItem("users"))
-
-  const foundUser = savedUsers.find(u => u.email === email && u.password === password)
-
-  const alert = document.createElement('div')
-  alert.classList.add("alert")
-
-  if (foundUser) {
-    localStorage.setItem("loggedInUser", JSON.stringify(foundUser))
-    alert.classList.add('alert', 'alert-success', 'alert-dismissible', 'fade', 'show')
-  
-    alert.innerHTML = `
-      Successful login
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    `
-
-    resultMessageDiv.appendChild(alert)
-
-    setTimeout(() => {
-      document.location.href = "/index.html"
-    }, 2000)
-  } else {
-    alert.classList.add("alert-danger")
-    alert.innerHTML = `
-      <div class="d-flex justify-content-between"> 
-        Invalid credentials
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-
-    `
-    document.querySelector('#email').value = ""
-    document.querySelector('#password').value = ""
-
-    resultMessageDiv.appendChild(alert)
+  if (!email || !password) {
+    showAlert("Email and password are required", "danger");
+    return;
   }
+
+  // Datos a enviar al backend
+  const loginData = {
+    email: email,
+    password: password,
+  };
+
+  // Enviar credenciales al backend
+  fetch("http://localhost:8080/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(loginData),
+  })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Invalid credentials");
+        }
+        return response.text(); // Recibe el token como texto plano
+      })
+      .then((token) => {
+        console.log("✅ Login exitoso, token recibido:", token);
+        localStorage.setItem("authToken", token); // Guardamos el token en localStorage
+
+        showAlert("Successful login. Redirecting...", "success");
+
+        setTimeout(() => {
+          goHome() // Redirigir al home
+        }, 2000);
+      })
+      .catch((error) => {
+        console.error("❌ Error en el login:", error);
+        showAlert("Invalid credentials", "danger");
+        document.querySelector("#password").value = "";
+      });
+});
+
+// Función para mostrar alertas
+function showAlert(message, type) {
+  resultMessageDiv.innerHTML = `
+    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
+}
+
+
+function goHome()
+{
+  window.location.href = window.location.origin + '/' + window.location.pathname.split('/')[1] + '/';
 }

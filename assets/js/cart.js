@@ -1,62 +1,61 @@
-
 /**
  * Funcion principal del feature agregar a carrito de compras
- * 
- * @param {*} event 
- * @returns 
+ *
+ * @param {*} event
+ * @returns
  */
-function handleAddToCart (event) {
-  const addButton = event.target
+function handleAddToCart(event) {
+    const addButton = event.target
 
-  addButton.disabled = true;
+    addButton.disabled = true;
 
-  const product = {
-    ...addButton.dataset,
-    id: parseInt(addButton.dataset.id),
-    price: parseFloat(addButton.dataset.price),
-    stock: parseInt(addButton.dataset.stock),
-    qty: 1
-  }
-
-  if (product.stock <= 0) {
-    showToast('no-products-toast')
-    addButton.disabled = false;
-    return
-  }
-
-  console.log('Adding product: ', product)
-
-  const productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || []
-  const indexInCart = productsInCart.findIndex(item => item.id === product.id)
-  console.log({ productsInCart, indexInCart })
-
-  if (indexInCart !== -1) {
-    // El producto ya fue agregado previamente
-    productsInCart[indexInCart] = {
-      ...productsInCart[indexInCart],
-      qty: ++productsInCart[indexInCart].qty
+    const product = {
+        ...addButton.dataset,
+        id: parseInt(addButton.dataset.id),
+        price: parseFloat(addButton.dataset.price),
+        stock: parseInt(addButton.dataset.stock),
+        qty: 1
     }
-  } else {
-    productsInCart.push(product)
-  }
 
-  // guardar en el local storage nuestro nuevo listado de productos actualizado
-  localStorage.setItem('productsInCart', JSON.stringify(productsInCart))
+    if (product.stock <= 0) {
+        showToast('no-products-toast')
+        addButton.disabled = false;
+        return
+    }
 
-  // Renders despues de agregar el producto al localstorage
-  updateStock(product)
-  updateProductsCounter(productsInCart)
-  renderShoppingCart(productsInCart)
+    console.log('Adding product: ', product)
 
-  // mostrar mensaje de proceso realizado exitosamente
-  showToast('product-added-toast')
-  addButton.disabled = false;
+    const productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || []
+    const indexInCart = productsInCart.findIndex(item => item.id === product.id)
+    console.log({productsInCart, indexInCart})
+
+    if (indexInCart !== -1) {
+        // El producto ya fue agregado previamente
+        productsInCart[indexInCart] = {
+            ...productsInCart[indexInCart],
+            qty: ++productsInCart[indexInCart].qty
+        }
+    } else {
+        productsInCart.push(product)
+    }
+
+    // guardar en el local storage nuestro nuevo listado de productos actualizado
+    localStorage.setItem('productsInCart', JSON.stringify(productsInCart))
+
+    // Renders despues de agregar el producto al localstorage
+    updateStock(product)
+    updateProductsCounter(productsInCart)
+    renderShoppingCart(productsInCart)
+
+    // mostrar mensaje de proceso realizado exitosamente
+    showToast('product-added-toast')
+    addButton.disabled = false;
 }
 
 /**
  * It updates the product stock in the "Add to cart" button
- * 
- * @param {*} productsInCart 
+ *
+ * @param {*} productsInCart
  */
 function updateStock(product, qty = 1) {
     const productButton = document.querySelector(`#product-${product.id}__btn`)
@@ -65,32 +64,34 @@ function updateStock(product, qty = 1) {
 
 /**
  * It updates the product counter tag in the page header
- * 
- * @param {*} productsInCart 
+ *
+ * @param {*} productsInCart
  */
-function updateProductsCounter (productsInCart) {
-  const counter = productsInCart.reduce((acc, product) => {
-    if (product?.qty) {
-        return acc + product.qty
-    }
-    return acc
-  }, 0)
+function updateProductsCounter(productsInCart) {
+    const counter = productsInCart.reduce((acc, product) => {
+        if (product?.qty) {
+            return acc + product.qty
+        }
+        return acc
+    }, 0)
 
-/*  const counterElement = document.querySelector('#cart-count')
-  counterElement.innerHTML = counter*/
+    console.log("Counter: ", counter);
+
+    const counterElement = document.querySelector('#cart-count')
+    counterElement.innerHTML = counter
 }
 
 /**
  * It renders the shopping cart products list and the summary for payment
- * 
+ *
  * @param {*} productsInCart the products added in the shopping cart (in localstorage)
- * @returns 
+ * @returns
  */
 function renderShoppingCart(productsInCart) {
     const productsListElement = document.querySelector('#minicart__products-list')
     const productsPaymentElement = document.querySelector('#minicart__products-payment')
     productsListElement.innerHTML = ""
-    
+
     if (productsInCart.length <= 0) {
         productsListElement.innerHTML = `
             <div class="minicart__noproducts">
@@ -121,7 +122,7 @@ function renderShoppingCart(productsInCart) {
                     </h4>
                     <div class="minicart__price">
                         <span class="minicart__current--price">$${product.price}</span>
-                        <span class="minicart__old--price">$${product.price*1.5}</span>
+                        <span class="minicart__old--price">$${product.price * 1.5}</span>
                     </div>
                     <div class="minicart__text--footer minicart__product-controls d-flex align-items-center" data-product-id="${product.id}">
                         <div class="quantity__box minicart__quantity" data-product-id="${product.id}">
@@ -162,23 +163,26 @@ function renderShoppingCart(productsInCart) {
         <div class="minicart__amount">
             <div class="minicart__amount_list d-flex justify-content-between">
                 <span>Sub Total:</span>
-                <span><b>$${subTotal.toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}</b></span>
+                <span><b>$${subTotal.toLocaleString(undefined, {maximumFractionDigits: 2, minimumFractionDigits: 2})}</b></span>
             </div>
             <div class="minicart__amount_list d-flex justify-content-between">
                 <span>Total:</span>
                 <span><b>
-                    $${(subTotal*1.11).toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}
+                    $${(subTotal * 1.11).toLocaleString(undefined, {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2
+    })}
                 </b></span>
             </div>
         </div>`
-    
+
     addEventListenerToShoppingCart(productsInCart)
 }
 
 /**
  * It adds the event listeners to the shopping cart control buttons (increase, decrease and delete)
- * 
- * @param {*} productsInCart 
+ *
+ * @param {*} productsInCart
  */
 function addEventListenerToShoppingCart(productsInCart) {
     const quantityWrapper = document.querySelectorAll(".minicart__product-controls");

@@ -611,3 +611,4 @@ function hideToast(id) {
   const toast = new bootstrap.Toast(toastEl)
   toast.hide()
 }
+

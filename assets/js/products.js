@@ -59,11 +59,11 @@ function renderProducts (data)
     for (var i = 0; i < filteredProducts.length; i++)
     {
         const product = filteredProducts[i]
-        const qtyInCart = productsInCart.find(item => item.id === product.id)?.qty || 0
-        const actualStock = product.stock-qtyInCart
+        const qtyInCart = productsInCart.find(item => item.id_product === product.id_product)?.qty || 0
+        const actualStock = product.quantity-qtyInCart
         const lastUnits = actualStock > 0 && actualStock <= 10
         productsHtml += `
-        <div class="card p-0 bg-light shadow me-3 mt-3 card-fixer" id="${product.id}">
+        <div class="card p-0 bg-light shadow me-3 mt-3 card-fixer" id="${product.id_product}">
             ${lastUnits ? `<div class="last-units__label">Last units</div>` : ""}
             <div class="img-container">
                 <img class="card-img-top h-100" src="${product.image}">
@@ -83,9 +83,9 @@ function renderProducts (data)
                     <p class="card-text mt-2">${product.description}</p>
                 </div>
                 <div class="row justify-content-center">
-                    <button ${actualStock === 0 ? "disabled" : ""} id="product-${product.id}__btn" class="btn add-to-cart-button w-75" data-name="${product.name}"         
-                    data-img="${product.img}" data-price="${product.price}"
-                    data-id="${product.id}" data-category="${product.category}" data-stock="${actualStock}"
+                    <button ${actualStock === 0 ? "disabled" : ""} id="product-${product.id_product}__btn" class="btn add-to-cart-button w-75" data-name="${product.name}"         
+                    data-img="${product.image}" data-price="${product.price}"
+                    data-id="${product.id_product}" data-category="${product.category}" data-stock="${actualStock}"
                     >
                         ${actualStock === 0 ? "Out of stock" : "Add to cart"}
                     </button>

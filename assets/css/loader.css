@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--inti-medium-green);
+    background: var(--inti-light-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,3 +67,4 @@ body.loaded {
 body.loaded > * {
     visibility: visible;
 }
+

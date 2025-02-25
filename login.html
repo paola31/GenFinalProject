@@ -1,73 +1,77 @@
 <!doctype html>
 <html lang="en">
-    <head>
-    </head>
+<head>
+</head>
 
-    <body>
+<body class="loading">
 
-        <header class="header__section">
-            <div id="offerBar"></div>
-            <div id="navbar"></div>
-            <div id="mobileNavbar"></div>
-            <div id="breadCrumb"></div>
-        </header>
+<div id="loaderContainer">
 
-        <main>
-            <section class="row container-fluid justify-content-center">
-                <div class="login-background"></div>
-                <div class="col-md-8 col-lg-6 mt-5">
-                    <div class="container-fluid" id="errors"></div>
+</div>
 
-                    <div class="container-fluid" id="successContainer" style="display: none">
-                        <div class="alert alert-success" role="alert" id="success"></div>
-                    </div>
+<header class="header__section">
+    <div id="offerBar"></div>
+    <div id="navbar"></div>
+    <div id="mobileNavbar"></div>
+    <div id="breadCrumb"></div>
+</header>
 
-                    <div class="container login-container">
-                        <div class="login-wrapper">
-                            <div class="login-form-container">
-                                <h1 class="register-form-title mb-3">Welcome to Inti</h1>
-                                <form id="login-form mt-3">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label-login">E-mail</label>
-                                        <input type="email" class="form-control" name="email" id="email">
-                                        <span class="text-danger" id="email-error"></span>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label-login">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password">
-                                    </div>
-                                    <div>
+<main>
+    <section class="row container-fluid justify-content-center">
+        <div class="login-background"></div>
+        <div class="col-md-8 col-lg-6 mt-5">
+            <div class="container-fluid" id="errors"></div>
+
+            <div class="container-fluid" id="successContainer" style="display: none">
+                <div class="alert alert-success" role="alert" id="success"></div>
+            </div>
+
+            <div class="container login-container">
+                <div class="login-wrapper">
+                    <div class="login-form-container">
+                        <h1 class="register-form-title mb-3">Welcome to Inti</h1>
+                        <form id="login-form mt-3">
+                            <div class="mb-3">
+                                <label for="email" class="form-label-login">E-mail</label>
+                                <input type="email" class="form-control" name="email" id="email">
+                                <span class="text-danger" id="email-error"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label-login">Password</label>
+                                <input type="password" class="form-control" name="password" id="password">
+                            </div>
+                            <div>
                                     <span>Create your account
                                         <a href="register.html">Here</a>
                                     </span>
-                                    </div>
-                                    <!-- login-button -->
-                                    <div class="button-container">
-                                        <button class="btn btn-primary" type="submit" id="login">Login</button>
-                                    </div>
-
-                                </form>
                             </div>
-                        </div>
+                            <!-- login-button -->
+                            <div class="button-container">
+                                <button class="btn btn-primary" type="submit" id="login">Login</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
-            </section>
-            <!-- End register section -->
-        </main>
+            </div>
+        </div>
+    </section>
+    <!-- End register section -->
+</main>
 
-        <div id="footer"></div>
-        <div id="notifier"></div>
+<div id="footer"></div>
+<div id="notifier"></div>
 
-        <!-- Scroll top bar -->
-        <button id="scroll__top">
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/>
-            </svg>
-        </button>
+<!-- Scroll top bar -->
+<button id="scroll__top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/>
+    </svg>
+</button>
 
-        <!-- All Script JS Plugins here  -->
-        <script src="assets/js/componentLoader.js"></script>
-        <script src="assets/js/login.js"></script>
+<!-- All Script JS Plugins here  -->
+<script src="assets/js/componentLoader.js"></script>
+<script src="assets/js/login.js"></script>
 
-    </body>
+</body>
 </html>

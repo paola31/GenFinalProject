@@ -1,158 +1,162 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-    </head>
+<head>
+</head>
 
-    <body>
+<body class="loading">
 
-        <header class="header__section">
-            <div id="offerBar"></div>
-            <div id="navbar"></div>
-            <div id="mobileNavbar"></div>
-            <div id="breadCrumb"></div>
-        </header>
+<div id="loaderContainer">
 
-        <main>
-            <div class="row container-fluid justify-content-center">
-                <div class="contact-background"></div>
-                <div class="col-md-8 col-lg-6 mt-5">
-                    <div class="container-fluid" id="errors"></div>
+</div>
 
-                    <div class="container-fluid" id="successContainer" style="display: none">
-                        <div class="alert alert-success" role="alert" id="success"></div>
-                    </div>
+<header class="header__section">
+    <div id="offerBar"></div>
+    <div id="navbar"></div>
+    <div id="mobileNavbar"></div>
+    <div id="breadCrumb"></div>
+</header>
 
-                    <div class="container contact-container">
-                        <div class="contact-wrapper">
-                            <h1 class="contact-form-title text-center">Contact Us</h1>
-                            <form id="contact-us-form" class="contact-form-container p-4 border rounded shadow-sm bg-light needs-validation" novalidate>
+<main>
+    <div class="row container-fluid justify-content-center">
+        <div class="contact-background"></div>
+        <div class="col-md-8 col-lg-6 mt-5">
+            <div class="container-fluid" id="errors"></div>
 
-                                <!-- Full Name -->
-                                <div class="mb-3 position-relative">
-                                    <label for="fullname" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" name="fullname" id="fullname" required>
-                                    <div class="invalid-feedback">Please enter your full name.</div>
-                                    <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
-                                </div>
+            <div class="container-fluid" id="successContainer" style="display: none">
+                <div class="alert alert-success" role="alert" id="success"></div>
+            </div>
 
-                                <!-- Email -->
-                                <div class="mb-3 position-relative">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" name="email" id="email" class="form-control" required>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                    <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
-                                </div>
+            <div class="container contact-container">
+                <div class="contact-wrapper">
+                    <h1 class="contact-form-title text-center">Contact Us</h1>
+                    <form id="contact-us-form" class="contact-form-container p-4 border rounded shadow-sm bg-light needs-validation" novalidate>
 
-                                <!-- Phone -->
-                                <div class="mb-3 position-relative">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" name="phone" id="phone" class="form-control" required pattern="^[0-9+\-\s]{7,15}$">
-                                    <div class="invalid-feedback">Please enter a valid phone number.</div>
-                                    <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
-                                </div>
-
-                                <!-- Subject -->
-                                <div class="mb-3 position-relative">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" name="subject" id="subject" class="form-control" required>
-                                    <div class="invalid-feedback">Please enter a subject.</div>
-                                    <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
-                                </div>
-
-                                <!-- Message -->
-                                <div class="mb-3 position-relative">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea name="message" id="message" rows="3" class="form-control" required></textarea>
-                                    <div class="invalid-feedback">Please enter your message.</div>
-                                    <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
-                                </div>
-
-                                <button class="btn btn-primary w-100" type="submit" aria-label="Send Message">Send</button>
-                            </form>
+                        <!-- Full Name -->
+                        <div class="mb-3 position-relative">
+                            <label for="fullname" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="fullname" id="fullname" required>
+                            <div class="invalid-feedback">Please enter your full name.</div>
+                            <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
                         </div>
-                    </div>
 
+                        <!-- Email -->
+                        <div class="mb-3 position-relative">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" name="email" id="email" class="form-control" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                            <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-3 position-relative">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" class="form-control" required pattern="^[0-9+\-\s]{7,15}$">
+                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                            <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="mb-3 position-relative">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control" required>
+                            <div class="invalid-feedback">Please enter a subject.</div>
+                            <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-3 position-relative">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" id="message" rows="3" class="form-control" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                            <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
+                        </div>
+
+                        <button class="btn btn-primary w-100" type="submit" aria-label="Send Message">Send</button>
+                    </form>
                 </div>
             </div>
 
-                <!-- Confirmation Modal -->
-                <div class="modal fade" id="contact-us-confirm-modal" tabindex="-1" aria-labelledby="contact-confirm-title" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="contact-confirm-title">Request Sent</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Thank you for contacting us! We will get back to you shortly.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="contact-us-confirm-modal" tabindex="-1" aria-labelledby="contact-confirm-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contact-confirm-title">Request Sent</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-        <div id="footer"></div>
-        <div id="notifier"></div>
+                <div class="modal-body">
+                    Thank you for contacting us! We will get back to you shortly.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="notifier"></div>
 
-        <!-- Scroll top bar -->
-        <button id="scroll__top">
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/>
-            </svg>
-        </button>
+    <!-- Scroll top bar -->
+    <button id="scroll__top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/>
+        </svg>
+    </button>
 
 
-        <!-- Customscript js -->
-        <script src="assets/js/componentLoader.js"></script>
+    <!-- Customscript js -->
+    <script src="assets/js/componentLoader.js"></script>
 
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const form = document.querySelector("#contact-us-form");
-                        const contactConfirmModal = new bootstrap.Modal('#contact-us-confirm-modal');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("#contact-us-form");
+            const contactConfirmModal = new bootstrap.Modal('#contact-us-confirm-modal');
 
-                        form.addEventListener("submit", function (event) {
-                            event.preventDefault();
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
 
-                            if (!form.checkValidity()) {
-                                event.stopPropagation();
+                if (!form.checkValidity()) {
+                    event.stopPropagation();
+                } else {
+                    // Capturar datos del formulario
+                    const formData = new FormData(form);
+
+                    // Enviar los datos a Formspree usando fetch
+                    fetch("https://formspree.io/f/xyzkanjr", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                contactConfirmModal.show(); // Mostrar modal de confirmación
+                                form.reset();
+                                form.classList.remove("was-validated");
                             } else {
-                                // Capturar datos del formulario
-                                const formData = new FormData(form);
-
-                                // Enviar los datos a Formspree usando fetch
-                                fetch("https://formspree.io/f/xyzkanjr", {
-                                    method: "POST",
-                                    body: formData,
-                                    headers: {
-                                        'Accept': 'application/json'
-                                    }
-                                })
-                                    .then(response => {
-                                        if (response.ok) {
-                                            contactConfirmModal.show(); // Mostrar modal de confirmación
-                                            form.reset();
-                                            form.classList.remove("was-validated");
-                                        } else {
-                                            alert("There was an error sending the form. Please try again.");
-                                        }
-                                    })
-                                    .catch(error => console.error("Error:", error));
+                                alert("There was an error sending the form. Please try again.");
                             }
+                        })
+                        .catch(error => console.error("Error:", error));
+                }
 
-                            form.classList.add("was-validated");
+                form.classList.add("was-validated");
 
-                            form.querySelectorAll("input, textarea").forEach(input => {
-                                const icon = input.nextElementSibling;
-                                if (!input.checkValidity()) {
-                                    icon.classList.remove("d-none");
-                                } else {
-                                    icon.classList.add("d-none");
-                                }
-                            });
-                        });
-                    });
-                </script>
-     </body>
+                form.querySelectorAll("input, textarea").forEach(input => {
+                    const icon = input.nextElementSibling;
+                    if (!input.checkValidity()) {
+                        icon.classList.remove("d-none");
+                    } else {
+                        icon.classList.add("d-none");
+                    }
+                });
+            });
+        });
+    </script>
+ </body>
 </html>

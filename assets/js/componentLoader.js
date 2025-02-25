@@ -70,10 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ]);
     }).then(() => {
         console.log("Todos los scripts han sido cargados.");
-        /*waitForRender(() => {*/
+
+        setTimeout(() => {
             console.log("Los componentes han sido renderizados en la pantalla.");
             document.dispatchEvent(new Event("componentsLoaded"));
-        /*});*/
+        }, 3000);
+        /*waitForRender(() => {
+            console.log("Los componentes han sido renderizados en la pantalla.");
+            document.dispatchEvent(new Event("componentsLoaded"));
+        });*/
     }).catch(error => console.error("Error en la carga de scripts:", error));
 });
 
@@ -105,5 +110,4 @@ function waitForRender(callback) {
 
     observer.observe(document.body, { childList: true, subtree: true });
 }
-
 

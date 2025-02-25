@@ -425,7 +425,7 @@
   right: 20px;
   z-index: 99;
   outline: none;
-  background-color: var(--secondary-color);
+  background-color: var(--inti-medium-green);
   color: var(--text-white-color);
   -webkit-box-shadow: 0 2px 22px rgba(0, 0, 0, 0.16);
           box-shadow: 0 2px 22px rgba(0, 0, 0, 0.16);

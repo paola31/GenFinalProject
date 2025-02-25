@@ -1,9 +1,3 @@
-"use strict";
-
-/*
-  Before After activation
-// */
-
 var divisor = document.getElementById("divisor"),
     handle = document.getElementById("handle"),
     slider = document.getElementById("slider");

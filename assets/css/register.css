@@ -154,6 +154,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -161,10 +162,13 @@ footer {
 .register-background {
     position: absolute;
     width: 100%;
-    height: 64%;
+    height: 100%;
     background: url('https://res.cloudinary.com/di1xiwdsn/image/upload/v1740341693/landscape_b8n5ge.svg') no-repeat center center/cover;
     /*animation: backgroundAnimation 10s infinite alternate ease-in-out;*/
     z-index: 0;
+    overflow: hidden;
+    max-height: 112vh;
+    /*opacity: 50%;*/
 }
 
 @keyframes backgroundAnimation {

@@ -111,7 +111,7 @@ function renderShoppingCart(productsInCart) {
             <div class="minicart__product--items d-flex">
                 <div class="minicart__thumb">
                     <a href="#">
-                        <img src="${product.img}" alt="${product.name} image">
+                        <img class="img-fluid" src="${product.img}" alt="${product.name} image">
                     </a>
                 </div>
                 <div class="minicart__text">

@@ -1,5 +1,5 @@
 const formLogin = document.querySelector("#login-form");
-const resultMessageDiv = document.querySelector("#result-message");
+const resultMessageDiv = document.querySelector("#errors");
 
 formLogin.addEventListener("submit", (e) => {
   e.preventDefault();

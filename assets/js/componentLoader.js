@@ -67,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
             loadScript("/assets/js/offerBar.js"),
             loadScript("/assets/js/navbar.js"),
             loadScript("/assets/js/categories.js"),
+            loadScript("/assets/js/breadcrumb.js"),
+            loadScript("/assets/js/contactus.js"),
+            loadScript("/assets/js/orderSuccess.js"),
             loadScript("/assets/js/loader.js")
         ]);
     }).then(() => {

@@ -6,6 +6,14 @@
         .catch(error => console.error('Error cargando el archivo JSON:', error));
 });*/
 
+function setupResponsiveCategories(data) {
+    renderCategories(data);
+
+    window.addEventListener('resize', function() {
+        renderCategories(data);
+    });
+}
+
 document.addEventListener('componentsLoaded', function() {
     fetch('http://localhost:8080/api/v1/categories') // Llamada al backend
         .then(response => {
@@ -16,18 +24,28 @@ document.addEventListener('componentsLoaded', function() {
         })
         .then(data => {
             localStorage.setItem("categories", JSON.stringify(data));
-            renderCategories(data)
+            setupResponsiveCategories(data);
             document.dispatchEvent(new Event("categoriesPersisted"));
         })
         .catch(error => console.error('Error al cargar las categorías:', error));
 });
+
+function getItemsPerSlide() {
+    const width = window.innerWidth;
+
+    if (width < 768) { // Pantallas pequeñas (móviles y tablets pequeñas)
+        return 3;
+    } else { // Pantallas más grandes (desktop, tabletas grandes, etc.)
+        return 5;
+    }
+}
 
 function renderCategories(data) {
     console.log("Rendering categories");
     let categoriesContainer = document.getElementById("categories");
     if(categoriesContainer  != null){
         let categoriesHtml = '';
-        let itemsPerSlide = 5; // Cantidad de tarjetas por slide
+        let itemsPerSlide = getItemsPerSlide(); //  Cantidad de tarjetas por slide calculado segun tamaño de pantalla
         let totalSlides = Math.ceil(data.length / itemsPerSlide);
 
         for (let i = 0; i < totalSlides; i++) {

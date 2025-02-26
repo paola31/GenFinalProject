@@ -12424,7 +12424,7 @@ input[type=range]::-moz-range-track {
 /* toasts */
 
 .text-bg-success {
-  background-color: var(--au-green) !important;
+  background-color: var(--inti-deep-green) !important;
 }
 
 .toast-container {

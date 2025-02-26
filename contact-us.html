@@ -28,9 +28,11 @@
             </div>
 
             <div class="container contact-container">
-                <div class="contact-wrapper">
+                <div class="contact-wrapper" id="formContainer">
                     <h1 class="contact-form-title text-center">Contact Us</h1>
-                    <form id="contact-us-form" class="contact-form-container p-4 border rounded shadow-sm bg-light needs-validation" novalidate>
+                    <form id="contact-us-form"
+                          class="contact-form-container p-4 border rounded shadow-sm bg-light needs-validation"
+                          novalidate>
 
                         <!-- Full Name -->
                         <div class="mb-3 position-relative">
@@ -51,7 +53,8 @@
                         <!-- Phone -->
                         <div class="mb-3 position-relative">
                             <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" name="phone" id="phone" class="form-control" required pattern="^[0-9+\-\s]{7,15}$">
+                            <input type="tel" name="phone" id="phone" class="form-control" required
+                                   pattern="^[0-9+\-\s]{7,15}$">
                             <div class="invalid-feedback">Please enter a valid phone number.</div>
                             <i class="bi bi-exclamation-circle text-danger position-absolute top-50 end-0 translate-middle-y me-3 d-none"></i>
                         </div>
@@ -80,30 +83,14 @@
         </div>
     </div>
 
-    <!-- Confirmation Modal -->
-    <div class="modal fade" id="contact-us-confirm-modal" tabindex="-1" aria-labelledby="contact-confirm-title" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="contact-confirm-title">Request Sent</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Thank you for contacting us! We will get back to you shortly.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="footer"></div>
     <div id="notifier"></div>
 
     <!-- Scroll top bar -->
     <button id="scroll__top">
         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+                  d="M112 244l144-144 144 144M256 120v292"/>
         </svg>
     </button>
 
@@ -111,52 +98,6 @@
     <!-- Customscript js -->
     <script src="assets/js/componentLoader.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.querySelector("#contact-us-form");
-            const contactConfirmModal = new bootstrap.Modal('#contact-us-confirm-modal');
 
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                if (!form.checkValidity()) {
-                    event.stopPropagation();
-                } else {
-                    // Capturar datos del formulario
-                    const formData = new FormData(form);
-
-                    // Enviar los datos a Formspree usando fetch
-                    fetch("https://formspree.io/f/xyzkanjr", {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                        .then(response => {
-                            if (response.ok) {
-                                contactConfirmModal.show(); // Mostrar modal de confirmación
-                                form.reset();
-                                form.classList.remove("was-validated");
-                            } else {
-                                alert("There was an error sending the form. Please try again.");
-                            }
-                        })
-                        .catch(error => console.error("Error:", error));
-                }
-
-                form.classList.add("was-validated");
-
-                form.querySelectorAll("input, textarea").forEach(input => {
-                    const icon = input.nextElementSibling;
-                    if (!input.checkValidity()) {
-                        icon.classList.remove("d-none");
-                    } else {
-                        icon.classList.add("d-none");
-                    }
-                });
-            });
-        });
-    </script>
- </body>
+</body>
 </html>

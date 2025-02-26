@@ -18,6 +18,13 @@
   font-weight: 600;
 }
 
+.breadcrumb__content--menu__items.active {
+  color: #333; /* un color diferente para el breadcrumb activo */
+  font-weight: bold;
+  pointer-events: none; /* para evitar clics */
+}
+
+
 @media only screen and (min-width: 992px) {
   .breadcrumb__content--title {
     margin-bottom: 10px;

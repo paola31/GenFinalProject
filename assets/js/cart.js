@@ -259,3 +259,11 @@ function addEventListenerToShoppingCart(productsInCart) {
         });
     }
 }
+
+document.addEventListener('componentsLoaded', function () {
+    const checkoutBtn = document.getElementById('completePurchase');
+
+    checkoutBtn.addEventListener('click', () => {
+        window.location.href = window.location.origin + '/GenFinalProject/order-success.html';
+    });
+});
